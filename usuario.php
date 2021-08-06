@@ -5,7 +5,11 @@ $correo = $_POST['correo'];
 $contrasenia = $_POST['contrasenia'];
 
 $clave = $correo[0].$correo[1].$correo[2].$correo[3];
+<<<<<<< HEAD
 $cadenaCaracteres = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 ';
+=======
+$cadenaCaracteres = 'abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ0123456789 ';
+>>>>>>> 29e8adeacf83e79b8b7b5cbab62441165734e717
 
 $contador = 0;
 $resultado='';
@@ -26,9 +30,18 @@ $resultado='';
  }
 
 
+<<<<<<< HEAD
 $conexion = new mysqli('localhost','root','','metodopropio');
  $prepara = $conexion->prepare("INSERT INTO usuario (correo, contrasena) VALUES (?, ?)");
  $prepara->bind_param("ss", $correo, $resultado);
  $prepara->execute();
  $prepara->fetch();
 echo $resultado;
+=======
+//$conexion = new mysqli('localhost','root','','metodopropio');
+// $prepara = $conexion->prepare("INSERT INTO usuario (correo, contrasena) VALUES (?, ?)");
+// $prepara->bind_param("ss", $correo, $resultado);
+// $prepara->execute();
+// $prepara->fetch();
+echo $resultado;
+>>>>>>> 29e8adeacf83e79b8b7b5cbab62441165734e717
